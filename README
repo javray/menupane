@@ -9,7 +9,7 @@ before closing.
 
 website sample : http://www.ryanwatkins.net/software/menupane
 
-Requires the 'onyx' Enyo library for the onyx.Slideable component.
+Requires the 'layout' Enyo library for the onyx.Slideable component.
 
 Tested platforms include: Android 2+, iOS 5+, Chrome 17+, Safari 5.1+, Firefox 10+
 

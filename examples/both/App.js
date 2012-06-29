@@ -5,13 +5,13 @@ enyo.kind({
   classes: "enyo-unselectable",
   components: [
     // height necessary.
-    { name: "menupane", kind: "MenuPane",
+    { name: "menupane", kind: "rwatkins.MenuPane",
       style: "height: 600px; width: 360px;",
-      onViewChanged: "viewChangedHandler",
-      onMenuOpened: "menuOpenedHandler",
-      onMenuClosed: "menuClosedHandler",
-      onSecondaryMenuOpened: "secondaryMenuOpenedHandler",
-      onSecondaryMenuClosed: "secondaryMenuClosedHandler",
+      onViewChange: "viewChangeHandler",
+      onMenuOpen: "menuOpenHandler",
+      onMenuClose: "menuCloseHandler",
+      onSecondaryMenuOpen: "secondaryMenuOpenHandler",
+      onSecondaryMenuClose: "secondaryMenuCloseHandler",
       menu: [
         { content: "Primary Menu", classes: "menu-header" },
         { content: "A", view: "a", classes: "menu-item" },
@@ -80,19 +80,19 @@ enyo.kind({
     }
   ],
 
-  viewChangedHandler: function(inSender, inEvent) {
+  viewChangeHandler: function(inSender, inEvent) {
     this.log();
   },
-  menuOpenedHandler: function(inSender, inEvent) {
+  menuOpenHandler: function(inSender, inEvent) {
     this.log();
   },
-  menuClosedHandler: function(inSender, inEvent) {
+  menuCloseHandler: function(inSender, inEvent) {
     this.log();
   },
-  secondaryMenuOpenedHandler: function(inSender, inEvent) {
+  secondaryMenuOpenHandler: function(inSender, inEvent) {
     this.log();
   },
-  secondaryMenuClosedHandler: function(inSender, inEvent) {
+  secondaryMenuCloseHandler: function(inSender, inEvent) {
     this.log();
   },
 

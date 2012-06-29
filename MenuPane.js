@@ -17,7 +17,7 @@
 
  */
 enyo.kind({
-  name: "MenuPane",
+  name: "rwatkins.MenuPane",
   published: {
     /** a list menu item controls for the left side menu.
         set 'view' property to the 'name' of the view to display
@@ -34,19 +34,19 @@ enyo.kind({
   },
   events: {
     //* Sent when view changes
-    onViewChanged: "",
+    onViewChange: "",
     //* Sent when left menu opens
-    onMenuOpened: "",
+    onMenuOpen: "",
     //* Sent when left menu closes
-    onMenuClosed: "",
+    onMenuClose: "",
     //* Sent when right menu opens
-    onSecondaryMenuOpened: "",
+    onSecondaryMenuOpen: "",
     //* Sent when right menu closes
-    onSecondaryMenuClosed: ""
+    onSecondaryMenuClose: ""
   },
 
   //* @protected
-  classes: "onyx menu-pane",
+  classes: "menu-pane",
   style: "overflow: hidden;",
   position: {  // default to 85% open
     menu: {
@@ -68,7 +68,7 @@ enyo.kind({
       showing: false,
       ontap: "menuTapHandler"
     },
-    { name: "pane", kind: "onyx.Slideable", classes: "menupane-pane",
+    { name: "pane", kind: "enyo.Slideable", classes: "menupane-pane",
       value: 0, min: 0, max: 85, unit: "%", draggable: false,
       style: "width: 100%; height: 100%;",
       onAnimateFinish: "paneAnimateFinishHandler"
@@ -94,7 +94,8 @@ enyo.kind({
         view.hide();
       }
     }, this);
-    this.doViewChanged(name);
+
+    this.doViewChange();
   },
 
   //* toggles the main menu
@@ -110,7 +111,6 @@ enyo.kind({
   toggleSecondaryMenu: function(inSender, inOriginator) {
     this.toggleMenu(inSender, inOriginator, true);
   },
-
 
   //* @protected
   create: function() {
@@ -193,15 +193,15 @@ enyo.kind({
       // fire events
       if (this.$.menu.getShowing()) {
         if (inSender.getValue() == this.position.menu.max) {
-          this.doMenuOpened();
+          this.doMenuOpen();
         } else {
-          this.doMenuClosed();
+          this.doMenuClose();
         }
       } else {
         if (inSender.getValue() == this.position.secondarymenu.min) {
-          this.doSecondaryMenuOpened();
+          this.doSecondaryMenuOpen();
         } else {
-          this.doSecondaryMenuClosed();
+          this.doSecondaryMenuClose();
         }
       }
 

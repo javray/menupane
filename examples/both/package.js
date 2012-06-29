@@ -1,7 +1,9 @@
 /* package.js */
 enyo.depends(
-  // requires onyx lib
-	"$lib/onyx",
+  // requires layout lib for Slideable 
+  "$lib/layout",
+  // requires onyx lib for Toolbar
+  "$lib/onyx",
 
   // require menupane kind
 	"../../",
