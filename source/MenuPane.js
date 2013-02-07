@@ -12,7 +12,7 @@
  */
 
 /**
- A Pane/View control that also provides Path/Facebook like menus
+ A Pane/View control that also provides Path/Facebook/etc-like menus
  that slide in from the left or right sides
 
  */
