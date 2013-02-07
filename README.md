@@ -15,6 +15,6 @@ Requires the 'layout' Enyo library for the onyx.Slideable component.
 Tested platforms include: Android 2+, iOS 5+, Chrome 17+, Safari 5.1+, Firefox 10+
 
 
-Copyright © 2013 Ryan Watkins <ryan@ryanwatkins.net>
+Copyright © 2012-2013 Ryan Watkins <ryan@ryanwatkins.net>
 
 Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. No representations are made about the suitability of this software for any purpose. It is provided "as is" without express or implied warranty.
